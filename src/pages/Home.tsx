@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 const Home: React.FC=()=>{
     const handleClick=()=>{
-        alert("Fir page home");
+        alert("First page home");
     };
 
     return(
@@ -21,7 +21,7 @@ const Home: React.FC=()=>{
             <p style={{fontSize:"1.1rem"}}>
                 Este es el home page de la interfaz.Se agrega texto,forms,botones o cualquier componente que se muestre
             </p>
-            <Button text="Bienvenido" variant="secondary"/>
+            <Button text="Bienvenido" variant="secondary" onClick={handleClick}/>
         </div>
     );
 };

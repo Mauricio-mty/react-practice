@@ -37,21 +37,23 @@ const Button: React.FC<ButtonProps>=({
 
     return(
         <button
-            onClick={onClick}
-            disabled={disabled}
-            style={{
-                backgroundColor: disabled? "#aaa":getColor(),
-                color:"white",
-                padding:"10px 16px",
-                border:"none",
-                borderRadius:"8px",
-                cursor: disabled?"not-allowed":"pointer",
-                fontSize:"16px",
-                fontWeight:500,
-                display:"flex",
-                alignItems:"center",
-                gap:"8px",
-                transition:"transform 0.15s ease,background-color 0.3s ease",
+           onClick={onClick}
+           disabled={disabled}
+           style={{
+                backgroundColor: disabled ? "#aaa" : getColor(),
+                color: "white",
+                padding: "8px 14px",  // un poco más pequeño
+                border: "none",
+                borderRadius: "8px",
+                cursor: disabled ? "not-allowed" : "pointer",
+                fontSize: "14px",     // más pequeño
+                fontWeight: "bold",
+                display: "inline-flex", // 👈 CAMBIO CLAVE
+                alignItems: "center",
+                justifyContent: "center",
+                width: "fit-content",   // 👈 CAMBIO CLAVE
+                gap: "6px",
+                transition: "transform 0.15s ease, background-color 0.3s ease",
             }}
             onMouseEnter={(e)=>{
                 if(!disabled)e.currentTarget.style.transform="scale(1.05";

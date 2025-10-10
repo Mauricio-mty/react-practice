@@ -3,10 +3,7 @@ import React from 'react';
 import Home from './pages/Home';
 
 function App(){
-/*  const handleClick=()=>{
-    alert("Hacer click");
-  };
-*/   
+ 
   return(
     <div>
       <Home/>
