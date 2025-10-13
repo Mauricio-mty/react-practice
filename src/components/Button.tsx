@@ -61,7 +61,7 @@ const Button: React.FC<ButtonProps>=({
             onMouseLeave={(e)=>{
                 e.currentTarget.style.transform="scale(1)";
             }}
-        >
+        >   
             {icon&&<span>{icon}</span>}
             {text}
         </button>
