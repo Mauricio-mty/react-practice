@@ -1,14 +1,20 @@
 import React,{useState} from "react";
 import Input from "../components/Input";
+import CheckBox from "../components/checkBox";
 
 const Write: React.FC=()=>{
 
    const [name,setName]=useState('');
+   const [check,setCheck]=useState(false);
 
     const handleNameChange=(event)=>{
         setName(event.target.value);
         console.log('real time value',)
     };
+
+    const habldeCheckChange=(event)=>{
+        setCheck(event.target.checked);
+    }
 
     return(
         <div
@@ -29,6 +35,12 @@ const Write: React.FC=()=>{
                 name="ingreso" 
                 placeholder="ffff" 
                 onChange={handleNameChange}
+            />
+            <CheckBox
+                name="terms"
+                label="Acetp de terms"
+                onChange={habldeCheckChange}
+                checked={check}            
             />
 
         </div>
